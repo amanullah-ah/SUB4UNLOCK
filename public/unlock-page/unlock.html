@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SUB4UNLOCK | DEVELOPED BY AMAN ULLAH</title>
+<link rel="icon" href="https://ik.imagekit.io/amanphoto/aman-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;900&family=Sora:wght@600;700&display=swap">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/unlock-page/unlock.css">
+</head>
+<body class="shared">
+<noscript><p class="noscript-msg">AMAN SUB4UNLOCK needs JavaScript. Please enable it to unlock links.</p></noscript>
+<main class="app">
+
+  <!-- TOP SECTION (Hero): logo, site ka naam aur tagline -->
+
+  <div class="hero">
+    <!-- Logo ka stage: andar glow, dashed ring aur logo box hai -->
+
+    <div class="logo-stage">
+      <!-- Logo ke peeche halka glow -->
+
+      <span class="logo-glow" aria-hidden="true"></span>
+      <!-- Logo ke around dashed ring (SVG) -->
+
+      <svg class="zz" viewBox="0 0 128 128" fill="none" aria-hidden="true">
+        <defs>
+          <!-- RING KA COLOR: yahan stop-color badalne se dashed ring ka color badalta hai (logo aur lock dono ki ring) -->
+
+          <linearGradient id="zzg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="128" y2="128">
+            <stop offset="0" stop-color="#FF8C00"/>
+            <stop offset=".4" stop-color="#7c6bff"/>
+            <stop offset=".72" stop-color="#FF8C00"/>
+            <stop offset="1" stop-color="#7c6bff"/>
+          </linearGradient>
+        </defs>
+        <!-- Dashed line ka shape. Dash size/speed CSS mein .zz-line se badalti hai -->
+
+        <rect class="zz-line" x="10" y="10" width="108" height="108" rx="31" pathLength="400" stroke="url(#zzg)" stroke-width="3.2" stroke-linecap="round"/>
+      </svg>
+      <!-- Logo box (rounded square) -->
+
+      <div class="mark" id="mark">
+        <!-- Asli logo image (ImageKit se). Load na ho to neeche wala icon dikhta hai -->
+
+        <img src="https://ik.imagekit.io/amanphoto/aman-sub4unlock-logo.jpg?updatedAt=1792410428914" alt="AMAN SUB4UNLOCK logo" width="84" height="84" decoding="async" fetchpriority="high" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()">
+        <!-- Backup link icon (jab logo image load na ho) -->
+
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12a4 4 0 0 1 4-4h2a4 4 0 0 1 0 8h-1" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/><path d="M15 12a4 4 0 0 1-4 4H9a4 4 0 0 1 0-8h1" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="20" y2="20"><stop stop-color="#7c6bff"/><stop offset="1" stop-color="#35d0ff"/></linearGradient></defs></svg>
+        <!-- Logo par chamak (shine) ka effect -->
+
+        <span class="shine" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- Site ka main title -->
+    <h1><span class="t-aman">AMAN</span> <span class="t-sub">SUB4UNLOCK</span></h1>
+
+    <!-- Title ke neeche choti line -->
+
+    <div class="tagline">Lock A Link · Gate It With Follows · Share Safely</div>
+  </div>
+
+  <!-- UNLOCK SCREEN: jab visitor short link kholta hai to ye card dikhta hai -->
+
+  <div class="modal-bg" id="modalBg">
+    <!-- Unlock card ka dabba -->
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="unlockTitle">
+      <!-- Close (X) button: sirf home page ke popup mein, short link page par hidden -->
+
+      <button class="close-x" id="closeX" type="button" aria-label="Close">✕</button>
+      <!-- Unlock card ka top part: lock icon, title aur subtitle -->
+
+      <div class="modal-head">
+        <!-- Lock icon aur uske around dashed ring -->
+
+        <div class="badge-stage">
+          <!-- Lock ki dashed ring (rounded square) -->
+
+          <svg class="zz" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect class="zz-line" x="4" y="4" width="56" height="56" rx="18" pathLength="360" stroke="url(#zzg)" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <!-- Lock icon box (sab verify hone par lock khul jaata hai aur green ho jaata hai) -->
+
+          <div class="lock-badge" id="lockBadge">
+            <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><defs><linearGradient id="g2" gradientUnits="userSpaceOnUse" x1="4" y1="4" x2="28" y2="28"><stop stop-color="#ffb747"/><stop offset="1" stop-color="#ff8c00"/></linearGradient></defs><g class="sh"><path d="M10.5 14v-3.5a5.5 5.5 0 0 1 11 0V14" stroke="url(#g2)" stroke-width="2.6" stroke-linecap="round"/></g><rect x="6.5" y="14" width="19" height="13" rx="4" fill="url(#g2)"/><circle cx="16" cy="20" r="1.9" fill="#0d0f1a"/></svg>
+          </div>
+        </div>
+        <div>
+          <!-- Unlock card ka title aur subtitle -->
+
+          <h3 id="unlockTitle">Unlock this link</h3>
+          <div class="sub" id="modalSub">Complete the steps below to reveal the destination.</div>
+        </div>
+      </div>
+      <!-- Progress bar: kitne platforms verify hue -->
+
+      <div class="progress" id="progress">
+        <div class="prog-top"><span id="progText">0 of 0 verified</span></div>
+        <div class="prog-track"><div class="prog-bar" id="progBar"></div></div>
+      </div>
+      <!-- Platforms ki verify rows (JS se banti hain, har ek mein "Open & Verify" button) -->
+
+      <div id="verifyList"></div>
+      <!-- Password input: sirf tab dikhta hai jab link par password laga ho -->
+
+      <div id="pwWrap" class="pw-wrap">
+        <label class="field-label" for="unlockPw">Enter password</label>
+        <input type="password" id="unlockPw" placeholder="Password" autocomplete="off">
+      </div>
+      <!-- Unlock button: sab platforms verify hone par chalu hota hai -->
+
+      <button class="unlock-btn" id="unlockBtn" type="button" disabled>Unlock link</button>
+      <!-- Galat password ka error message -->
+
+      <div class="err" id="unlockErr" role="alert">Incorrect password. Try again.</div>
+      <!-- Unlock hone ke baad asli link ka box (Open link / Copy) -->
+
+      <div class="reveal" id="reveal"></div>
+    </div>
+  </div>
+
+  <footer class="foot-note">
+    <span style="font-family: 'Poppins', sans-serif;font-size: 10px;font-weight: 600;color:#FFFFFF;">© SUB4UNLOCK DEVELOPED BY</span>
+    <span style="font-family: 'Poppins', sans-serif;font-size: 10px;font-weight: 900;color:#FF8C00;">AMAN ULLAH</span>
+  </footer>
+</main>
+
+<!-- Chhote notification messages (jaise "Copied!") -->
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="/unlock-page/unlock.js"></script>
+</body>
+</html>
